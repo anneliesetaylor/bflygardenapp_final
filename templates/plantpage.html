@@ -1,0 +1,163 @@
+
+{% extends "base.html" %}
+
+{% block content %}
+
+<div class="row">
+  <div class="col-auto mx-auto pt-4 pb-2">
+    <div class="indivpageheading">
+      <h1 class="display-3 px-3">{{ pspecies['latin_name'] }}</h1>
+
+      <h2 class="h4 px-3 pb-2">{{ pspecies['plant_common_name'] }}</h2>
+    </div>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-6 mx-auto pt-1 pb-3">
+    <img class="img-fluid" src="{{ url_for('static', filename='images/' + pspecies['image_file'] ) }}" alt="Image of plant">
+  </div>
+</div>
+
+
+<div class="row">
+  <div class="col-8 mx-auto">
+
+
+    <div class="bsaccordion" id="accordion">
+
+
+      <div class="card">
+        <div class="card-header" id="headingOne">
+          <h5 class="mb-0">
+            <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+              Species Family
+            </button>
+          </h5>
+        </div>
+
+        <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordion">
+          <div class="card-body">
+            <p>Family: {{ pspecies['plant_family'] }}</p>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="card">
+        <div class="card-header" id="headingTwo">
+          <h5 class="mb-0">
+            <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+              Physical Characteristics
+            </button>
+          </h5>
+        </div>
+
+        <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
+          <div class="card-body">
+            <p>{{ pspecies['plant_physical_characteristics'] }}</p>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="card">
+        <div class="card-header" id="headingThree">
+          <h5 class="mb-0">
+            <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+              Habitat and Location
+            </button>
+          </h5>
+        </div>
+
+        <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordion">
+          <div class="card-body">
+            <p>{{ pspecies['plant_habitats'] }}</p>
+            <p>Growth range: {{ pspecies['plant_range'] }}</p>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="card">
+        <div class="card-header" id="headingFour">
+          <h5 class="mb-0">
+            <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+              Cultivation
+            </button>
+          </h5>
+        </div>
+
+        <div id="collapseFour" class="collapse" aria-labelledby="headingFour" data-parent="#accordion">
+          <div class="card-body">
+            <p>{{ pspecies['plant_cultivation'] }}</p>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="card">
+        <div class="card-header" id="headingFive">
+          <h5 class="mb-0">
+            <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+              Propagation
+            </button>
+          </h5>
+        </div>
+
+        <div id="collapseFive" class="collapse" aria-labelledby="headingFive" data-parent="#accordion">
+          <div class="card-body">
+            <p>{{ pspecies['plant_propagation'] }}</p>
+          </div>
+        </div>
+      </div>
+
+
+    </div> <!-- END OF #ACCORDION -->
+
+
+  </div>
+</div>
+
+
+<div class=" col-6 mx-auto pt-1">
+
+
+  <div class="row mx-auto pt-2">
+    <div class="col text-center p-2">
+      <a class="btn btn-block" href="{{ url_for( 'index' )}}" role="button">Return to the homepage</a>
+    </div>
+  </div>
+
+
+  <div class="row mx-auto pt-2">
+    <div class="col text-center p-2">
+      <a class="btn btn-block" href="{{ url_for( 'pdirectory' ) }}" role="button">Back to Plant Species</a>
+    </div>
+  </div>
+
+
+  <div class="row mx-auto pt-2">
+    <div class="col text-center p-2">
+      <a class="btn btn-block" href="{{ url_for( 'bdirectory' ) }}" role="button">Explore Butterfly Species</a>
+    </div>
+  </div>
+
+
+<div class="row mx-auto pb-4 pt-2">
+  <div class="col-auto text-center">
+    <div class="attr_div">
+      <p class="text-muted">Photo from Wikimedia Commons- <a href="http://creativecommons.org/licenses/by-sa/3.0/" title="Creative Commons Attribution-Share Alike 3.0">CC BY-SA 3.0</a>, see original <a href="{{ pspecies['img_attr'] }}">here</a>.</p>
+    </div>
+  </div>
+</div>
+
+
+</div>
+
+
+
+
+
+
+{% endblock %}

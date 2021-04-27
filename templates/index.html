@@ -1,0 +1,57 @@
+
+{% extends "base.html" %}
+
+{% block content %}
+
+<div class="row">
+  <div id="title_box" class="col-6 mx-auto">
+
+    <h1 id="page_title" class="text-center mt-3 pb-3">
+      <span class="display-3 mb-2">Blooming</span>
+      <br>
+        <span id="for" class="pt-2">FOR</span>
+      <br>
+      <span class="display-2 mt-0">Butterflies</span>
+    </h1>
+
+  </div>
+</div>
+
+
+<div class=" col-6 mx-auto pt-1">
+  <div id="homepage" class="p-2">
+    <p>This app, developed with gardeners and butterfly-lovers in mind, is your all-in-one stop for everything you need to know about butterfly gardening! Featuring almost 400 butterfly species and over 40 different butterfly-attracting plants, you can find almost any detail about plant and butterfly species to take your butterfly gardening to the next level. The key to successful butterfly gardening is knowing what you want to attract and knowing how to attract it, which this app aims to help you understand.</p>
+
+    <p>If you're just starting out, or want some tips and tricks, check out the "How to make a butterfly garden" page. But if you're already a pro with two green thumbs, peruse the  plant or butterfly species directories to find ways to elevate your butterfly gardening skills.</p>
+
+    <p>Click below to learn more:</p>
+  </div>
+
+
+  <div class="row mx-auto pt-2">
+    <div class="col text-center p-2">
+      <a class="btn btn-block" href="{{ url_for( 'bflygardening' )}}" role="button">How to make a butterfly garden</a>
+    </div>
+  </div>
+
+
+  <div class="row mx-auto pb-4 pt-2">
+
+    <div class="col text-center">
+      <a class="btn btn-block" href="{{ url_for( 'pdirectory' ) }}" role="button">Plant Species</a>
+    </div>
+
+    <div class="col text-center">
+      <a class="btn btn-block" href="{{ url_for( 'bdirectory' ) }}" role="button">Butterfly Species</a>
+    </div>
+
+  </div>
+
+
+
+</div>
+
+
+
+
+{% endblock %}

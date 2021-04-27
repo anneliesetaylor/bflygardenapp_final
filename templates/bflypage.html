@@ -1,0 +1,161 @@
+
+{% extends "base.html" %}
+
+{% block content %}
+
+
+<div class="row">
+  <div class="col-auto mx-auto pt-4 pb-2">
+    <div class="indivpageheading">
+      <h1 class="display-3 px-3">{{ bflyspecies['species'] }}</h1>
+    </div>
+  </div>
+</div>
+
+
+<div class="row">
+  <div class="col-8 mx-auto">
+
+    <div class="bsaccordion" id="bfaccordion">
+
+
+      <div class="card">
+        <div class="card-header" id="bfheadingOne">
+          <h5 class="mb-0">
+            <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#bfcollapseOne" aria-expanded="true" aria-controls="bfcollapseOne">
+              Species Family and Subfamily
+            </button>
+          </h5>
+        </div>
+        <!---------------------------------------------->
+        <div id="bfcollapseOne" class="collapse" aria-labelledby="bfheadingOne" data-parent="#bfaccordion">
+          <div class="card-body">
+            <p>Family: {{ bflyspecies['family'] }}</p>
+            <p>Subfamily: {{ bflyspecies['subfamily'] }}</p>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="card">
+        <div class="card-header" id="bfheadingTwo">
+          <h5 class="mb-0">
+            <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#bfcollapseTwo" aria-expanded="false" aria-controls="bfcollapseTwo">
+              Identification
+            </button>
+          </h5>
+        </div>
+        <!---------------------------------------------->
+        <div id="bfcollapseTwo" class="collapse" aria-labelledby="bfheadingTwo" data-parent="#bfaccordion">
+          <div class="card-body">
+            <p>{{ bflyspecies['identification'] }}</p>
+            <p>Wingspan: {{ bflyspecies['wingspan'] }}</p>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="card">
+        <div class="card-header" id="bfheadingThree">
+          <h5 class="mb-0">
+            <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#bfcollapseThree" aria-expanded="false" aria-controls="bfcollapseThree">
+              Caterpillar Host
+            </button>
+          </h5>
+        </div>
+        <!---------------------------------------------->
+        <div id="bfcollapseThree" class="collapse" aria-labelledby="bfheadingThree" data-parent="#bfaccordion">
+          <div class="card-body">
+            <p>{{ bflyspecies['caterpillarhost'] }}</p>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="card">
+        <div class="card-header" id="bfheadingFour">
+          <h5 class="mb-0">
+            <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#bfcollapseFour" aria-expanded="false" aria-controls="bfcollapseFour">
+              Habitat
+            </button>
+          </h5>
+        </div>
+        <!---------------------------------------------->
+        <div id="bfcollapseFour" class="collapse" aria-labelledby="bfheadingFour" data-parent="#bfaccordion">
+          <div class="card-body">
+            <p>{{ bflyspecies['habitat'] }}</p>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="card">
+        <div class="card-header" id="bfheadingFive">
+          <h5 class="mb-0">
+            <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#bfcollapseFive" aria-expanded="false" aria-controls="bfcollapseFive">
+              Adult food
+            </button>
+          </h5>
+        </div>
+        <!---------------------------------------------->
+        <div id="bfcollapseFive" class="collapse" aria-labelledby="bfheadingFive" data-parent="#bfaccordion">
+          <div class="card-body">
+            <p>{{ bflyspecies['adultfood'] }}</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-header" id="bfheadingSix">
+          <h5 class="mb-0">
+            <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#bfcollapseSix" aria-expanded="false" aria-controls="bfcollapseSix">
+              Migration and range
+            </button>
+          </h5>
+        </div>
+        <!---------------------------------------------->
+        <div id="bfcollapseSix" class="collapse" aria-labelledby="bfheadingSix" data-parent="#bfaccordion">
+          <div class="card-body">
+            <p>{{ bflyspecies['flight'] }}</p>
+            <p>Range: {{ bflyspecies['range'] }}</p>
+          </div>
+        </div>
+      </div>
+
+
+    </div> <!-- END OF #ACCORDION -->
+
+
+  </div>
+</div>
+
+
+
+<div class=" col-6 mx-auto pt-1">
+
+
+  <div class="row mx-auto pt-2">
+    <div class="col text-center p-2">
+      <a class="btn btn-block" href="{{ url_for( 'index' )}}" role="button">Return to the homepage</a>
+    </div>
+  </div>
+
+
+  <div class="row mx-auto pt-2">
+    <div class="col text-center p-2">
+      <a class="btn btn-block" href="{{ url_for( 'pdirectory' ) }}" role="button">Explore Plant Species</a>
+    </div>
+  </div>
+
+  <div class="row mx-auto pt-2">
+    <div class="col text-center p-2">
+      <a class="btn btn-block" href="{{ url_for( 'bdirectory' ) }}" role="button">Back to Butterfly Species</a>
+    </div>
+  </div>
+
+
+</div>
+
+
+
+{% endblock %}

@@ -1,0 +1,90 @@
+
+{% extends "base.html" %}
+
+{% block content %}
+
+
+<div class="row">
+  <div class="col-auto pt-4">
+    <div class="directoryheading">
+      <h1 class="display-4 p-3">How to Start a Butterfly Garden</h1>
+    </div>
+  </div>
+</div>
+
+
+  <div class="col-10 mx-auto py-3">
+
+    <div id="howtogarden">
+
+      <div class="col-8 mx-auto pb-3 pt-4">
+
+        <div class="pb-3">
+          <img class="img-fluid mx-auto" src="{{ url_for('static', filename='images/butterfly.jpg') }}" alt="Image of plant">
+        </div>
+
+
+        <h2 id="materials">Materials needed:</h2>
+
+        <ul>
+          <li>butterfly-attracting flowers</li>
+          <li>large, flat rock</li>
+          <li>water source</li>
+          <li>one or more trees or shrubs</li>
+        </ul>
+
+        <h2 id="assembly">Assembling your garden:</h2>
+
+
+          <h3>Select the site for your garden</h3>
+              <ul>
+                <li>Choose a site that has some sun but is also sheltered from wind.</li>
+                <li>Include a few trees and shrubs for roosting at night and for cooling off on the hottest days.</li>
+              </ul>
+
+          <h3>Incorporate rocks</h3>
+              <ul>
+                <li>Be sure to inculde one or two large, flat rocks in the sun so butterflies have a place to bask when mornings are cool.</li>
+              </ul>
+
+          <h3>Provide a water source</h3>
+              <ul>
+                <li>Butterflies can only obtain water from few sources so be kind to your visitors and create an easily accessible "puddle" out of an old container, or birdbath, to provide them with a safe perch to drink.</li>
+              </ul>
+
+          <h3>Add your plants</h3>
+              <ul>
+                <li>Research prior to buying plants and landscaping your garden is crucial. You need to ensure that you're attracting butterflies that exist in your region, and are choosing plants that you have the weather and environment to support.</li>
+                <li>Remember that every butterfly first starts out as larvae. If you want your garden to be a continuous habitat for specific butterfly species, learn what plants are caterpillar hosts for those species.</li>
+                <li>Learn to distinguish the larvae of butterflies you're trying to attract from pest species.</li>
+              </ul>
+
+          <h3>Aovid using pesticides</h3>
+              <ul>
+                <li>reat your landscape like the miniature ecosystem that it is, banning the use of insecticides and herbicides.</li>
+                <li>With a diversity of plant material, you're not likely to attract large numbers of a plant pest, and you'll also be protecting natural predators.</li>
+              </ul>
+
+
+
+        <p class="text-center pt-3">Adapted from <a id="hgtv" href="https://www.hgtv.com/outdoors/gardens/garden-styles-and-types/how-to-create-a-butterfly-garden" target="_blank">HGTV</a></p>
+        <p id="photoattr" class="text-center text-muted">Photo by <a href="https://unsplash.com/@kris_ricepees?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Gary Bendig</a> on <a href="https://unsplash.com/s/photos/butterfly?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a></p>
+
+
+
+      </div>
+
+    </div>
+
+  </div>
+
+
+
+  <div class="row py-3">
+    <div class="col-4 mx-auto text-center p-2">
+      <a class="btn btn-block" href="{{ url_for( 'index' )}}" role="button">Return to the homepage</a>
+    </div>
+  </div>
+
+
+{% endblock %}
